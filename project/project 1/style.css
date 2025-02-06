@@ -1,0 +1,331 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+body {
+  font-family: "Open Sans", serif;
+  font-weight: normal;
+}
+header {
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+}
+.first-part-nav {
+  background-color: #e63135;
+  color: #fce8e9;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-wrap: nowrap;
+  padding: 5px 0px;
+  font-weight: bold;
+}
+.phone {
+  background-color: #000000;
+  border-radius: 9px;
+  margin: 0px 5px;
+  padding: 2px 5px;
+  border: 1px solid white;
+}
+.second-part-nav {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  cursor: pointer;
+}
+.logo img {
+  width: 200px;
+}
+.menu ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-evenly;
+  align-content: center;
+  gap: 40px;
+}
+.pay button {
+  color: white;
+  padding: 5px 10px;
+  background-color: #000000;
+  border-radius: 9px;
+  cursor: pointer;
+}
+.hero {
+  background-image: url("https://www.innomatics.in/wp-content/uploads/2025/01/banner_new-03-scaled.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  width: 100%;
+}
+.hero2 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0px 30px;
+}
+
+.right-hero {
+  width: 50%;
+}
+.right-hero h1 {
+  padding: 10px 0px;
+  font-weight: bold;
+  color: #000;
+}
+h1 span {
+  display: block;
+
+  font-weight: normal;
+}
+.right-hero p {
+  font-size: 14px;
+  padding: 5px 0px;
+}
+strong {
+  color: #000;
+}
+.highlight {
+  color: red;
+  font-weight: bold;
+}
+.numbers {
+  font-weight: bold;
+}
+.view_more {
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+  margin: 5px 0px;
+}
+.view_more:hover {
+  background-color: darkred;
+}
+.hero-left {
+  /* border: 2px solid rebeccapurple; */
+  width: 50%;
+}
+.hero-left h1 {
+  text-align: center;
+  font-weight: bold;
+  color: #03045e;
+}
+.cards-left-hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  height: 200px;
+  padding: 20px;
+  margin: 10px 0px;
+  border-radius: 12px;
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #000;
+}
+
+.card i {
+  font-size: 40px;
+  color: #e63135;
+  transition: color 0.3s ease;
+}
+
+.card h4 {
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #03045e;
+}
+#Courses {
+  background-color: #000000;
+  color: white;
+  padding: 10px;
+}
+
+#Courses h1 {
+  text-align: center;
+  font-size: 34px;
+  line-height: 48px;
+  padding: 20px 0px;
+  font-weight: 900;
+}
+.courses-cards {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  margin: 30px;
+}
+.courses-card img {
+  width: 295px;
+}
+.courses-card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+  text-align: center;
+  max-width: 300px;
+  min-height: 390px;
+  
+}
+.courses-card h3 {
+  font-size: 16px;
+}
+.courses-card button {
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  margin: 10px 0px;
+  padding: 10px 20px;
+}
+.courses-card div {
+  max-width: 300px;
+  margin: 10px;
+}
+.courses-card div p {
+  font-size: 14px;
+  text-align: justify;
+}
+.courses-card div h1 {
+  font-size: 20px;
+}
+#Testimonials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.reviews {
+  border: 1px solid black;
+  border-radius: 9px;
+  height: 300px;
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 30px;
+  align-items: center;
+}
+.reviews p {
+  max-width: 90%;
+  letter-spacing: 1px;
+  font-size: 20px;
+}
+.reviews h3 {
+  max-width: 50%;
+  font-size: 30px;
+  letter-spacing: 5px;
+}
+.studentImg {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 5px;
+}
+.studentImg img {
+  width: 200px;
+  border-radius: 9px;
+  margin: 10px;
+  border: 2px solid black;
+}
+.blog_cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+
+}
+.blog_card img {
+  width: 300px;
+}
+.blog_card {
+  border: 2px dotted black;
+  max-width: 300px;
+  min-height: 290px;
+  margin: 10px;
+}
+.blog_card h3 {
+    font-size: 16px;
+    padding: 10px 0px;
+}
+.blog_card p {
+    font-size: 16px;
+}
+.footer-container{
+    background-color: #000000;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+.footer-container a{
+    color: white;
+    text-decoration: none;
+}
+.footer_1{
+max-width: 30%;
+min-height: 300px;
+}
+.social-icons i{
+    margin: 10px 0px;
+
+}
+.footer_2{
+max-width: 30%;
+padding: 20px;
+min-height: 300px;
+}
+.footer_2 ul li,a{
+    list-style: none;
+    margin: 5px 0px;
+}
+.footer_2 h3,.footer_3 h3{
+    color: #e63135;
+    margin: 10px 0px;
+}
+.footer_3{
+max-width: 30%;
+font-size: 14px;
+min-height: 300px;
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: space-evenly;
+}
+.footer_1 img{
+    max-width: 100%;
+}
+.footer-bottom{
+    padding: 10px;
+    color: white;
+    background-color:#444444;
+    text-align: center;
+}
+
