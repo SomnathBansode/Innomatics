@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>JS Problem Solving</h1>
+        
+        <pre>
+                <h3>ATM Withdrawal System</h3>
+                function atmWithdrawal(balance, amount, pin, enteredPin) {
+                        if (enteredPin !== pin) return "Incorrect PIN";
+                        if (amount > balance) return "Insufficient Funds";
+                        if (amount % 100 !== 0) return "Enter amount in multiples of 100";
+                        return `Withdrawal successful. Remaining balance: $${balance - amount}`;
+                }
+                
+                <h3>Online Shopping Discount & Free Shipping</h3>
+                function calculateFinalAmount(orderAmount) {
+                        let discount = orderAmount > 1000 ? 0.20 : orderAmount >= 500 ? 0.10 : 0;
+                        let finalAmount = orderAmount - (orderAmount * discount);
+                        let shipping = finalAmount > 50 ? 0 : 10;
+                        return finalAmount + shipping;
+                }
+                
+                <h3>Student Grading System with Extra Credit</h3>
+                function calculateGrade(marks, attendance) {
+                        if (attendance > 90) marks += 5;
+                        return marks >= 90 ? "A" : marks >= 80 ? "B" : marks >= 70 ? "C" : marks >= 60 ? "D" : "F";
+                }
+                
+                <h3>Smart Traffic Light System</h3>
+                function trafficLightControl(density) {
+                        const times = { "Heavy Traffic": 60, "Moderate Traffic": 40, "Light Traffic": 20 };
+                        return times[density] || "Invalid traffic density";
+                }
+                
+                <h3>Movie Ticket Pricing with Time and Age Discount</h3>
+                function calculateTicketPrice(age, showTime) {
+                        let price = 12;
+                        if (showTime < 17) price *= 0.8;
+                        if (age > 60) price *= 0.7;
+                        if (age < 12) price *= 0.6;
+                        return price;
+                }
+                
+                <h3>Job Application Filter</h3>
+                function isEligibleForJob(age, experience, qualification) {
+                        return age >= 21 && age <= 55 && experience >= 2 && qualification === "Bachelor's Degree";
+                }
+                
+                <h3>E-commerce Coupon Redemption</h3>
+                function applyCoupon(orderAmount, couponCode) {
+                        let discount = couponCode === "DISCOUNT10" && orderAmount > 500 ? 0.10 : 0;
+                        let freeShipping = couponCode === "FREESHIP" && orderAmount > 200;
+                        let finalAmount = orderAmount - (orderAmount * discount);
+                        let shipping = freeShipping || finalAmount > 50 ? 0 : 10;
+                        return finalAmount + shipping;
+                }
+                
+                <h3>Fitness Membership Plan</h3>
+                function choosePlan(planType, wantsTrainer, wantsDietPlan) {
+                        return planType === "VIP" || (wantsTrainer && wantsDietPlan) ? "VIP Plan - $80/month" : 
+                                     planType === "Premium" || wantsTrainer ? "Premium Plan - $50/month" : 
+                                     "Basic Plan - $20/month";
+                }
+                
+                <h3>Electricity Bill Calculation with Peak Hours</h3>
+                function calculateElectricityBill(units, timeOfDay) {
+                        let rate = units > 300 ? 3 : units > 100 ? 4 : 5;
+                        if (timeOfDay >= 20 || timeOfDay < 8) rate *= 1.1;
+                        return units * rate;
+                }
+                
+                <h3>Flight Ticket Booking System</h3>
+                function calculateFlightFare(classType, luggageWeight, isStudent, isSenior) {
+                        let fare = 300 + (classType === "Business" ? 200 : classType === "First" ? 500 : 0);
+                        fare += Math.max(0, Math.floor((luggageWeight - 20) / 10)) * 50;
+                        let discount = isStudent ? 0.15 : isSenior ? 0.10 : 0;
+                        return fare * (1 - discount);
+                }
+                
+                console.log(atmWithdrawal(5000, 1000, 1234, 1234));
+                console.log(calculateFinalAmount(1200));
+                console.log(calculateGrade(85, 95));
+                console.log(trafficLightControl("Heavy Traffic"));
+                console.log(calculateTicketPrice(65, 14));
+                console.log(isEligibleForJob(30, 3, "Bachelor's Degree"));
+                console.log(applyCoupon(600, "DISCOUNT10"));
+                console.log(choosePlan("Basic", true, false));
+                console.log(calculateElectricityBill(250, 22));
+                console.log(calculateFlightFare("Economy", 25, false, true));
+        </pre>
+    </body>
+</html>
