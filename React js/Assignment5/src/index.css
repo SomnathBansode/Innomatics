@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace;
+}
+.add {
+  background-color: #22c55e;
+
+  font-weight: bold;
+}
+.container {
+  background-color: #e0fcea;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+input,
+button {
+  padding: 5px 30px;
+  border-radius: 9px;
+  background-color: white;
+  border: 1px solid #16a34a;
+  font-weight: bold;
+  gap: 20px;
+  margin: 3px;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 5px 20px;
+  border-radius: 5px;
+  text-align: center;
+  display: inline-block;
+  min-width: 70px;
+}
+.todo-container ul li p {
+  max-width: 70%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.view-btn {
+  background-color: aqua;
+}
+
+.edit-btn {
+  background-color: #ffdd57;
+}
+
+.delete {
+  background-color: #ff4d4d;
+  border: none;
+  color: black;
+  cursor: pointer;
+}
+.save-btn {
+  background-color: #22c55e;
+}
+.todo-container {
+  width: 80%;
+  max-width: 800px;
+  margin: 20px 0;
+  max-height: 50%;
+  overflow: auto;
+}
+
+.todo-container ul {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+}
+
+.todo-container ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #afeec5;
+  padding: 10px;
+  border-radius: 9px;
+  margin: 5px 0;
+  word-wrap: break-word;
+  gap: 10px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 5px;
+  flex-shrink: 0;
+}
+
+.action-buttons .btn {
+  text-align: center;
+  color: black;
+  font-weight: normal;
+}
+view-container {
+  background-color: #bbf7d0;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.15);
+  width: 90%;
+  max-width: 420px;
+  text-align: center;
+}
+
+.view-container h2 {
+  color: #16a34a;
+  margin-bottom: 15px;
+}
+
+.view-container p {
+  font-size: 16px;
+  color: #333;
+  margin: 8px 0;
+}
+
+.back-btn {
+  display: inline-block;
+  padding: 8px 20px;
+  background-color: #16a34a;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 15px;
+  transition: background 0.3s ease;
+}
+
+.back-btn:hover {
+  background-color: #128a3b;
+}
+
+.card {
+  background-color: #bbf7d0; /* Light green background */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.15);
+  width: 90%;
+  max-width: 420px;
+  text-align: center;
+}
+
+.card h2 {
+  color: #16a34a;
+  margin-bottom: 15px;
+}
+
+.card p {
+  font-size: 16px;
+  color: #333;
+  margin: 8px 0;
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .form-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  .view-container {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .todo-container {
+    width: 100%;
+  }
+
+  .btn {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .back-btn {
+    font-size: 12px;
+    padding: 6px 15px;
+  }
+}
