@@ -25,6 +25,7 @@ const Home = () => {
       id: Math.random(),
       title: newTodo,
       description: description || "No description",
+      completed: false, // Add this line
     };
 
     setTodos([...todos, newTask]);
@@ -35,6 +36,14 @@ const Home = () => {
 
   const handleDelete = (id) => {
     const updatedTodos = todos.filter((todo) => todo.id !== id);
+    setTodos(updatedTodos);
+    localStorage.setItem("Todo", JSON.stringify(updatedTodos));
+  };
+
+  const handleComplete = (id) => {
+    const updatedTodos = todos.map((todo) =>
+      todo.id === id ? { ...todo, completed: !todo.completed } : todo
+    );
     setTodos(updatedTodos);
     localStorage.setItem("Todo", JSON.stringify(updatedTodos));
   };
@@ -62,17 +71,23 @@ const Home = () => {
       <div className="todo-container">
         <ul>
           {todos.map((todo) => (
-            <li key={todo.id}>
+            <li key={todo.id} className={todo.completed ? "completed" : ""}>
               <p>{todo.title}</p>
               <div className="action-buttons">
-                <Link to={`/view/${todo.id}`} className="view-btn  btn">
+                <button
+                  className="complete-btn btn"
+                  onClick={() => handleComplete(todo.id)}
+                >
+                  {todo.completed ? "Undo" : "Complete"}
+                </button>
+                <Link to={`/view/${todo.id}`} className="view-btn btn">
                   View
                 </Link>
-                <Link to={`/edit/${todo.id}`} className="edit-btn btn ">
+                <Link to={`/edit/${todo.id}`} className="edit-btn btn">
                   Edit
                 </Link>
                 <button
-                  className="delete  btn"
+                  className="delete btn"
                   onClick={() => handleDelete(todo.id)}
                 >
                   Delete
